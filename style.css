@@ -32,6 +32,17 @@ button {
   font-size: 18pt;
   font-weight: bold;
 }
+/* Reset game */
+.reset-btn {
+  background: white;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: 0;
+  cursor: pointer;
+  font-size: 18pt;
+  font-weight: bold;
+}
 
 .disabled {
   color: grey;
@@ -129,18 +140,6 @@ button {
   font-size: 20px;
 }
 
-/* Reset game */
-.reset-btn {
-  background: white;
-  color: black;
-  border-radius: 5px;
-  padding: 10px 20px;
-  border: 0;
-  cursor: pointer;
-  font-size: 18pt;
-  font-weight: bold;
-}
-
 /* Highlight result */
 .highlight {
   color: red;
@@ -152,7 +151,7 @@ button {
   html, body {
   width: 100%;
   height: 100%;
-  background: rgb(230, 173, 173);
+  background: lightblue;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -177,9 +176,21 @@ button {
   color: black;
   border-radius: 5px;
   padding: 10px 10px;
-  border: 2;
+  border: 0;
   cursor: pointer;
   font-size: 14pt;
+  font-weight: bold;
+}
+
+/* Reset game */
+.reset-btn {
+  background: white;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: 0;
+  cursor: pointer;
+  font-size: 18pt;
   font-weight: bold;
 }
 
@@ -208,6 +219,8 @@ button {
 }
 
 .board {
+  object-fit: cover;
+  aspect-ratio: 1/1;
   padding: 10px;
   display: grid;
   grid-gap: 10px;
@@ -224,8 +237,8 @@ button {
 /* Kartu */
 .card {
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   cursor: pointer;
   perspective: 1000px;
 }
@@ -277,18 +290,6 @@ button {
   transform: rotateY(180deg) rotateZ(50deg);
   padding: 40px;
   font-size: 20px;
-}
-
-/* Reset game */
-.reset-btn {
-  background: white;
-  color: black;
-  border-radius: 5px;
-  padding: 10px 20px;
-  border: 0;
-  cursor: pointer;
-  font-size: 18pt;
-  font-weight: bold;
 }
 
 /* Highlight result */
