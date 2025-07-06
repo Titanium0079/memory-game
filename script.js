@@ -13,6 +13,7 @@ const state = {
   flippedCard: 0,
   totalFlips: 0,
   totalTime: 0,
+  isChechking: false,
   loop: null,
 };
 
@@ -92,7 +93,9 @@ const flipBackCards = () => {
 
 const flipCard = card => {
   if (
+    !state.gameStarted ||
     state.flippedCard >= 2 ||
+    state.isChecking || //blokir saat mengecek 2 kartu
     card.classList.contains('flipped') ||
     card.classList.contains('matched')
   ) return;
@@ -101,7 +104,6 @@ const flipCard = card => {
   state.flippedCard++;
   state.totalFlips++;
 
-  if (!state.gameStarted) startGame();
 
   if (state.flippedCard === 2) {
     const flipped = document.querySelectorAll('.flipped:not(.matched)');
@@ -149,7 +151,7 @@ const resetGame = () => {
 
     selectors.start.classList.remove('disabled');
     selectors.boardContainer.classList.remove('flipped');
-    selectors.win.hiiden = true;
+    selectors.win.hidden = true;
 
     generateGame();
 };
