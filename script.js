@@ -13,7 +13,7 @@ const state = {
   flippedCard: 0,
   totalFlips: 0,
   totalTime: 0,
-  isChechking: false,
+  isChecking: false, //flag untuk mencegah klik saat animasi pengecekan
   loop: null,
 };
 
